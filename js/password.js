@@ -1,25 +1,27 @@
-var password = 'yura';
-var check = prompt('Write your password');
-var checkPass = checkPassword();
+var checkPass = comparePassword('yura');
 
-console.log(checkPass);
+console.log(checkPass('dsad'));
+console.log(checkPass('yura'));
+console.log(checkPass('dsad'));
+console.log(checkPass('yura'));
+console.log(checkPass('dsad'));
 
-function checkPassword() {
+
+
+function comparePassword(password) {
   var attempt = 0;
-  var greet = 'Welcome yura';
-  var warning = 'this is ' + attempt + '\'s try';
+  var warning = 'incorrect input ' + attempt +'\'s time';
 
-  return function() {
-
+  return function(check) {
     if (check === password) {
-      return greet;
-    } else if (check !== password) {
-      console.log('Incorrect password.');
-      ++attempt;
-      if (attempt > 5) {
+      return true;
+    } else {
+      attempt++;
+      if (attempt >= 5) {
         return warning;
-      } 
+      }
+
+      return false;
     }
-    return false;
-  }
+  };
 }
