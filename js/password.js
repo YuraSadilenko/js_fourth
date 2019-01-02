@@ -11,9 +11,6 @@ console.log(checkPass('dsad'));
 console.log(checkPass('dsad'));
 console.log(checkPass('dsad'));
 
-
-
-
 function comparePassword(password) {
   var attempt = 0;
 
@@ -22,7 +19,7 @@ function comparePassword(password) {
       return true;
     } else {
       attempt++;
-      var warning = 'incorrect input ' + attempt +'\'s time';
+      var warning = 'incorrect input ' + attempt + '\'s time';
       if (attempt >= 5) {
         return warning;
       }

@@ -20,7 +20,7 @@ var form1 = {
 
 var form2 = {
 	name: {
-		value: 'Masha',
+		value: 'Dasha',
 		validationRules: {
 			minLength: 3,
 			maxLength: 20,
@@ -40,7 +40,7 @@ var form2 = {
 
 var form3 = {
 	name: {
-		value: 'Masha',
+		value: 'Sasha',
 		validationRules: {
 			minLength: 3,
 			maxLength: 20,
@@ -58,11 +58,16 @@ var form3 = {
 	},
 };
 
-var validationForm = validation();
+var validationForm;
 
-console.log(validationForm(form1));
-console.log(validationForm(form2));
+validationForm = validation();
 console.log(validationForm(form3));
+
+validationForm = validation();
+console.log(validationForm(form2));
+
+validationForm = validation();
+console.log(validationForm(form1));
 
 function validation() {
   var results = [];
