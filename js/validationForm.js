@@ -58,16 +58,14 @@ var form3 = {
 	},
 };
 
-var validationForm;
+var validationForm1 = validation();
+console.log(validationForm1(form3));
 
-validationForm = validation();
-console.log(validationForm(form3));
+var validationForm2 = validation();
+console.log(validationForm2(form2));
 
-validationForm = validation();
-console.log(validationForm(form2));
-
-validationForm = validation();
-console.log(validationForm(form1));
+var validationForm3 = validation();
+console.log(validationForm3(form1));
 
 function validation() {
   var results = [];
